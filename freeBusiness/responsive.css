@@ -1,0 +1,89 @@
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .header {
+        width: 100vw;
+    }
+
+    .header fieldset {
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .header input {
+        margin-bottom: 10px;
+    }
+
+    .services {
+        padding-top: 10%;
+    }
+
+    .happyclients img {
+        height: 92px;
+        width: 100px;
+    }
+
+    .happyclients .col-lg-6 {
+        flex-direction: column;
+    }
+
+    .onEarth {
+        left: 31%;
+    }
+
+    #earth {
+        background-position-x: center;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .header {
+        width: 100vw;
+    }
+
+    .header form {
+        margin-left: 6%;
+    }
+
+    .header fieldset {
+        flex-flow: column wrap;
+    }
+
+    .header input {
+        margin-bottom: 10px;
+        width: 93%;
+    }
+
+    .header button {
+        width: 93%;
+    }
+
+    .header .container {
+        justify-content: center;
+    }
+
+    .notebook {
+        width: 81%;
+        height: 126%;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .services .header__title {
+        margin-top: 10%;
+    }
+
+    .carousel-indicators {
+        background: #000;
+    }
+
+    #pricing-table .text-center {
+        padding: 0;
+    }
+
+    #pricing-table {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}

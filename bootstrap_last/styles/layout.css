@@ -1,0 +1,686 @@
+/* Generalise
+---------------------------------------------------------*/
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.6em;
+}
+
+body {
+  color: #cbcbcb;
+  background-color: #4a4e57;
+}
+
+a {
+  color: #dc3545;
+  outline: none;
+  text-decoration: none !important;
+}
+
+a:active,
+a:focus {
+  background: transparent;
+}
+
+nav,
+body,
+input,
+textarea {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  word-wrap: break-word;
+  /*allows unbreakable words to be broken*/
+}
+
+/* Transition Fade */
+*,
+*::before,
+*::after {
+  transition: all 0.2s ease-in-out;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+heading {
+  font-family: "Fira Code", monospace;
+  margin: 0;
+  line-height: normal;
+  font-weight: normal;
+}
+
+address {
+  font-size: normal;
+  font-weight: normal;
+}
+
+.font-xs {
+  font-size: 0.8rem;
+}
+
+/* The .hor-cen is a generic class used to center align a containing element
+horizontally. It should be used in conjunction with a second class or ID*/
+.hor-cen {
+  display: flex;
+  margin: 0 auto;
+}
+
+/* Hovering Effect of .btn */
+.btn.btn-danger:hover {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: none;
+  line-height: normal;
+  vertical-align: middle;
+}
+
+/* Additional Menu Links and Social Icons
+----------------------------------------------------------------------------------------- */
+#secondaryNavbar .navbar-nav .nav-item {
+  display: flex;
+  /* For aligning "|" after each link */
+}
+
+#secondaryNavbar .navbar-nav .nav-item::after {
+  content: "|";
+  margin-left: 10px;
+  align-self: center;
+}
+
+/* Remove the divider "|" and margin after the last link */
+#secondaryNavbar .navbar-nav .nav-item:last-child::after {
+  margin-left: 0;
+  content: "";
+}
+
+/* Font Awesome Icons */
+.social-icon {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-icon a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 18px;
+  text-align: center;
+  color: #32353c;
+  background-color: #fff;
+}
+
+.social-icon li {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  padding: 0;
+  line-height: normal;
+}
+
+.social-icon a:hover {
+  color: #fff !important;
+}
+
+/* Background colors for Font Awesome Icons */
+.faicon-facebook:hover {
+  background-color: #3b5998 !important;
+}
+
+.faicon-twitter:hover {
+  background-color: #00acee !important;
+}
+
+.faicon-instagram:hover {
+  background-color: #ea4c89 !important;
+}
+
+.faicon-linkedin:hover {
+  background-color: #0e76a8 !important;
+}
+
+.faicon-pinterest:hover {
+  background-color: #c8232c !important;
+}
+
+/* Header for text/logo
+---------------------------------------------------------*/
+#header header {
+  height: 6rem;
+}
+
+#header h1 {
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+}
+
+#header a {
+  color: inherit;
+}
+
+#header .t-3 {
+  font-family: Ubuntu, sans-serif;
+  font-weight: 600;
+}
+
+#header h1:hover {
+  color: #28a745 !important;
+  cursor: pointer;
+}
+
+/* Media Queries for Responsiveness
+sm: 576px; md: 768px; lg: 992px; xl:1200px; */
+@media screen and (max-width: 992px) {
+  #header h1 {
+    font-size: 3rem;
+  }
+
+  #header h2 {
+    font-size: 1.5rem;
+  }
+
+  #header .flex-row {
+    flex-direction: column !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #header h2 {
+    font-size: 1.15rem;
+  }
+}
+
+/* Navigation/Menu Bar
+---------------------------------------------------------*/
+#mainNavbar.navbar .nav-item:hover {
+  background-color: rgba(220, 53, 69, 0.7);
+}
+
+#mainNavbar.navbar .active {
+  background-color: #dc3545;
+}
+
+/* To remove space on top and bottom of nav links */
+#mainNavbar a.nav-link {
+  padding: 0.8rem;
+}
+
+#mainNavbar.navbar-dark .navbar-nav .nav-link:focus,
+#mainNavbar.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+
+.dropdown-item {
+  color: #fff;
+}
+
+.dropdown-item:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Cover Image (Page Intro)
+---------------------------------------------------------*/
+#cover-image #pageintro {
+  padding: 200px 0;
+}
+
+#cover-image #pageintro .heading {
+  margin-bottom: 20px;
+  font-family: "Dancing Script", cursive;
+  font-size: 8rem;
+  font-weight: 700;
+}
+
+#cover-image #pageintro p {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+#cover-image #pageintro article {
+  display: block;
+  overflow: hidden;
+}
+
+#cover-image {
+  background: url(../gallery/pic-cover.jpg) fixed center no-repeat;
+  height: 900px;
+  background-size: cover;
+}
+
+/* Overlay Effect For Images */
+.overlay {
+  color: #fff;
+  background-color: inherit;
+  position: relative;
+  z-index: 1;
+}
+
+.overlay::after {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0, 0, 4);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  content: "";
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+  #pageintro .heading {
+    font-size: 7rem !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #pageintro .heading {
+    font-size: 6rem !important;
+  }
+
+  #pageintro.pl-5 {
+    padding-left: 0 !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #pageintro .heading {
+    font-size: 4rem !important;
+  }
+
+  #pageintro p,
+  #pageintro .btn {
+    font-size: 1rem !important;
+  }
+
+  #pageintro.ml-5 {
+    margin-left: 0 !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #pageintro .heading {
+    font-size: 3rem !important;
+  }
+
+  #pageintro .ml-5 {
+    margin-left: 0 !important;
+  }
+}
+
+/* Content Area
+---------------------------------------------------------*/
+.content-wrapper {
+  top: -250px;
+  position: relative;
+  z-index: 99;
+  box-shadow: 0 0 10px 0 white;
+}
+
+/* Services */
+#services li {
+  padding: 40px 0 0 0;
+  text-align: center;
+}
+
+#services li article {
+  display: block;
+  position: relative;
+  padding: 65px 20px 25px 20px;
+  color: inherit;
+  background-color: #f6f6f6;
+}
+
+#services li article i {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  line-height: 70px;
+  margin: -40px 0 0 -40px;
+  border: 5px solid;
+  border-radius: 50%;
+  font-size: 36px;
+  z-index: 1;
+  color: #fff;
+  border-color: #fff;
+  background-color: #dc3545;
+}
+
+#services li article .heading {
+  font-size: 1.2rem;
+}
+
+#services li article:hover i {
+  color: #dc3545;
+  background-color: #f6f6f6;
+}
+
+#services .btn.btn-danger:hover {
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+@media screen and (max-width: 992px) {
+  #services .p-5 {
+    padding: 0 !important;
+  }
+}
+
+/* Text Over Image
+---------------------------------------------------------*/
+.overlay.red::after {
+  background-color: rgba(220, 53, 69, 0.5);
+}
+
+#text-over-image {
+  background: url(../gallery/pic-over-image1.jpg) fixed center no-repeat;
+}
+
+@media screen and (max-width: 992px) {
+  #text-over-image>.p-5 {
+    padding: 3rem 0 !important;
+  }
+}
+
+/* Text Overlapping Image
+---------------------------------------------------------*/
+#text-overlap-image #second-column {
+  z-index: 99;
+  background-color: white;
+  box-shadow: 0 0 10px 0 grey;
+  margin-left: -100px;
+}
+
+@media screen and (max-width: 992px) {
+  #text-overlap-image.p-5 {
+    padding: 3rem 1rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #text-overlap-image #second-column {
+    margin-left: 0px;
+  }
+}
+
+/* Testimonials Carousel
+---------------------------------------------------------*/
+#testimonials-carousel {
+  background: url(../gallery/pic-testimonial.jpg) center no-repeat;
+}
+
+/* News and Updates
+---------------------------------------------------------*/
+.blog article figure {
+  display: block;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.blog article .textwrap .meta li {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 0.8rem;
+}
+
+.blog article .textwrap .meta li:last-child {
+  margin-right: 0;
+}
+
+/* Image Hover Effect */
+.img-hover {
+  display: block;
+  position: relative;
+  max-width: 100%;
+}
+
+.img-hover::before,
+.img-hover::after {
+  display: block;
+  position: absolute;
+  content: "";
+  text-align: center;
+  opacity: 0;
+}
+
+.img-hover::before {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.img-hover::after {
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin: -25px 0 0 -25px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  /* FontAwesome for solid needs this property to work */
+  content: "\f121";
+  font-size: 36px;
+}
+
+.img-hover:hover::before {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+
+.img-hover:hover::after {
+  color: #fff;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1200px) {
+  #news-blog.p-5 {
+    padding: 3rem 1rem !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #news-blog>.p-5 {
+    padding: 1rem !important;
+  }
+}
+
+/* Footer
+-------------------------------------------------------------------*/
+#body-footer {
+  background-color: #32353c;
+}
+
+#body-footer .linklist li {
+  display: block;
+  margin-bottom: 15px;
+  padding: 0 0 15px 0;
+  border-bottom: 1px solid;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+#body-footer .linklist li:last-child {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+#body-footer .contact.linklist li {
+  position: relative;
+  padding-left: 40px;
+}
+
+#body-footer .contact li * {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+#body-footer .contact li i {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  font-size: 16px;
+  text-align: center;
+}
+
+#body-footer input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid;
+  border-color: transparent;
+  color: #32353c;
+  background-color: #fff;
+}
+
+#body-footer input:focus {
+  border-color: #dc3545;
+}
+
+@media screen and (max-width: 768px) {
+  #copyright.mx-5 {
+    margin: 0 !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #copyright.px-5 {
+    padding: 0 !important;
+  }
+}
+
+/* Back to Top Button */
+#backtotop {
+  z-index: 999;
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 100%;
+  text-decoration: none;
+  color: #fff;
+  background-color: #dc3545;
+  visibility: hidden;
+  /* hide initially */
+  opacity: 0;
+}
+
+#backtotop i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: inherit;
+}
+
+/* Make it visible when cover image is scrolled up.
+.visible is added using JS */
+#backtotop.visible {
+  visibility: visible;
+  opacity: 0.5;
+}
+
+#backtotop:hover {
+  opacity: 1;
+}
+
+/* Sticky Social Media Bar
+-------------------------------------------------------------------*/
+#sticky-social-icon .float-sticky-bar>li {
+  background-color: #222;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 4px 5px;
+  width: 150px;
+  position: fixed;
+  z-index: 999;
+  transition: all 0.5s ease;
+  display: flex;
+  justify-content: flex-end;
+  left: -105px;
+}
+
+#sticky-social-icon .fab {
+  font-size: 20px;
+  color: #fff;
+  padding: 10px 0 10px 10px;
+  width: 35px;
+  margin-left: 8px;
+}
+
+#sticky-social-icon .float-sticky-bar>li:hover {
+  left: 0;
+}
+
+#sticky-social-icon .float-sticky-bar>li>a {
+  color: #fff !important;
+  text-decoration: none;
+  text-align: center;
+  line-height: 45px !important;
+  vertical-align: top !important;
+}
+
+/* Position Each Icons */
+#sticky-social-icon .position-fb {
+  top: 160px;
+}
+
+#sticky-social-icon .position-tw {
+  top: 212px;
+}
+
+#sticky-social-icon .position-in {
+  top: 264px;
+}
+
+#sticky-social-icon .position-li {
+  top: 316px;
+}
+
+#sticky-social-icon .position-pi {
+  top: 368px;
+}
