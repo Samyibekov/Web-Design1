@@ -362,6 +362,11 @@ i {
     text-transform: uppercase;
 }
 
+.happyclients .container {
+    display: flex;
+}
+
+
 /********************Newsletter*************************/
 .newsletter .header__title {
     color: #394b50;
@@ -452,6 +457,5 @@ hr {
     font-family: "Open Sans";
     font-size: 13px;
     font-weight: 400;
-    line-height: 24px;
     text-align: center;
 }

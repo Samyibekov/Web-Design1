@@ -78,6 +78,16 @@
         background: #000;
     }
 
+    .pricing .text-center {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+
+    .pricing .col-lg-4 {
+        margin-bottom: 20px;
+    }
+
     #pricing-table .text-center {
         padding: 0;
     }
@@ -85,5 +95,50 @@
     #pricing-table {
         padding-left: 24px;
         padding-right: 24px;
+    }
+
+    .howitworks .text-center {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+
+    .happyclients {
+        height: 288vh;
+    }
+
+    .happyclients .container {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .happyclients .col-lg-6 {
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    .happyclients .col-lg-6 img {
+        height: 140px;
+    }
+
+    .newsletter form {
+        margin-left: 6%;
+    }
+
+    .newsletter fieldset {
+        flex-flow: column wrap;
+    }
+
+    .newsletter input {
+        margin-bottom: 10px;
+        width: 93%;
+    }
+
+    .newsletter button {
+        width: 93%;
+    }
+
+    .newsletter .onEarth {
+        left: 16%;
     }
 }
